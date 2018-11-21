@@ -12,25 +12,25 @@ Using Machine Learning we can analyze the sentiment behind texts or a post. It w
 3) Use data visualization tools/skills to graphically display analysis results for simple visual representation of data 
 
 ## Team Member
-Saifee Dalal
-Sandeep Komuravelli
-Randy Chan
-Deepti Shandilya
-Ghassan Aleqabi
-Aparna Paul
+    Saifee Dalal
+    Sandeep Komuravelli
+    Randy Chan
+    Deepti Shandilya
+    Ghassan Aleqabi
+    Aparna Paul
 
 
 ## Data Source and Tools
-Twitter
-Python
-PySpark
-Scikit-Learn
-Javascript 
-HTML
-CSS
-Tableau
-MongoDB
-Heroku
+    Twitter
+    Python
+    PySpark
+    Scikit-Learn
+    Javascript 
+    HTML
+    CSS
+    Tableau
+    MongoDB
+    Heroku
 
 
 ## Data Flow Diagram
