@@ -1,4 +1,4 @@
-# FinalProject - Sentimental Analysis
+# Final Project - Sentimental Analysis
 ![ML](https://user-images.githubusercontent.com/37318055/48816762-0f2e9600-ed09-11e8-8472-6cb9aff2e7a8.jpg)
 
 ## Backgound
