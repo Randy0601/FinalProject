@@ -1,5 +1,5 @@
 # FinalProject - Sentimental Analysis
-https://user-images.githubusercontent.com/37318055/48816762-0f2e9600-ed09-11e8-8472-6cb9aff2e7a8.jpg
+![alt text]https://user-images.githubusercontent.com/37318055/48816762-0f2e9600-ed09-11e8-8472-6cb9aff2e7a8.jpg
 
 ## Backgound
 Social media platforms are often used to convey personal feelings and opinions for the world to see. One of the biggest challenges lies in understanding the "sentiments" behind social media posts.
