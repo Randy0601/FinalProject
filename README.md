@@ -31,6 +31,7 @@ Using Machine Learning we can analyze the sentiment behind texts or a post. It w
     Tableau
     MongoDB
     Heroku
+    NLTK
 
 
 ## Data Flow Diagram
