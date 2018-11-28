@@ -35,3 +35,4 @@ Using Machine Learning we can analyze the sentiment behind texts or a post. It w
 
 
 ## Data Flow Diagram
+    ![capture](https://user-images.githubusercontent.com/37318055/49124828-7a391900-f283-11e8-8a91-46eb0bccb659.PNG)
