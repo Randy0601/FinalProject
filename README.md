@@ -39,8 +39,8 @@ Using Machine Learning we can analyze the sentiment behind texts or a post. It w
 
 
 ## Data Challenges/Limitation
-Repeated Letters - Tweets contain very casual language. Keywords can contain an arbitrary number of repeated letters (e.g. huuuungry, huuuuuuuugry, huuuuuuuuuuuungry). These would be converted into their own unique token even though they are the same.
-Emoticons - 
-Tweets containing multiple subjects - e.g. I had a great breakfast this morning, but a horrible dinner.
-Retweets - Retweeting is the process of copying another user's tweet. Including them can give a particular tweet extra weight in the training data
+<b>Repeated Letters<b> - Tweets contain very casual language. Keywords can contain an arbitrary number of repeated letters (e.g. huuuungry, huuuuuuuugry, huuuuuuuuuuuungry). These would be converted into their own unique token even though they are the same.
+<b>Emoticons<b> - Training process makes use of emoticons as noisy labels. It is important to discuss the role they play in classification
+<b>Tweets containing multiple subjects<b> - e.g. I had a great breakfast this morning, but a horrible dinner.
+<b>Retweets<b> - Retweeting is the process of copying another user's tweet. Including them can give a particular tweet extra weight in the training data
 
