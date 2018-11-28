@@ -36,3 +36,11 @@ Using Machine Learning we can analyze the sentiment behind texts or a post. It w
 
 ## Data Flow Diagram
 ![DF](https://user-images.githubusercontent.com/37318055/49124828-7a391900-f283-11e8-8a91-46eb0bccb659.PNG)
+
+
+## Data Challenges/Limitation
+Repeated Letters - Tweets contain very casual language. Keywords can contain an arbitrary number of repeated letters (e.g. huuuungry, huuuuuuuugry, huuuuuuuuuuuungry). These would be converted into their own unique token even though they are the same.
+Emoticons - 
+Tweets containing multiple subjects - e.g. I had a great breakfast this morning, but a horrible dinner.
+Retweets - Retweeting is the process of copying another user's tweet. Including them can give a particular tweet extra weight in the training data
+
