@@ -1,5 +1,5 @@
 # Final Project - Sentimental Analysis
-![ML](https://user-images.githubusercontent.com/37318055/48816762-0f2e9600-ed09-11e8-8472-6cb9aff2e7a8.jpg)
+![predictive_analytics_technologies](https://user-images.githubusercontent.com/37318055/49330804-8231db00-f559-11e8-9db7-861a98d1070e.png)
 
 ## Backgound - Business Problem Overview
 Flight cancellation and delay is a very common problem in the real world. It can have a negatively financial impact both the airlines and passengers financially. Furthermore, it will also impact personal scheduled events and commitments. A passenger who is delayed on a multi-plane trip could miss a connecting flight. Anger, frustration and even Air rage can occur in delayed passengers.
@@ -38,12 +38,12 @@ Flight cancellation and delay is a very common problem in the real world. It can
 
 
 ## Data Flow Diagram
-![DF](https://user-images.githubusercontent.com/37318055/49124828-7a391900-f283-11e8-8a91-46eb0bccb659.PNG)
+![predictive-1](https://user-images.githubusercontent.com/37318055/49330803-7fcf8100-f559-11e8-8107-989757428ad1.png)
 
 
 ## Data Challenges/Limitation
-<b>Repeated Letters</b> - Tweets contain very casual language. Keywords can contain an arbitrary number of repeated letters (e.g. huuuungry, huuuuuuuugry, huuuuuuuuuuuungry). These would be converted into their own unique token even though they are the same.<br>
-<b>Emoticons</b> - Training process makes use of emoticons as noisy labels. It is important to discuss the role they play in classification<br>
-<b>Tweets containing multiple subjects</b> - e.g. I had a great breakfast this morning, but a horrible dinner.<br>
-<b>Retweets</b> - Retweeting is the process of copying another user's tweet. Including them can give a particular tweet extra weight in the training data
+<b>No Price Information</b> - Datasource did not include price information. Limitation on price impacting business decision<br>
+<b>Data Cleanup</b> - Large sets of data including too many features which also include unusable data (N/A or Null)<br>
+<b>Data Field Dictionary</b> - Data set includes many fields with unclear description. Need to create a dictionary table to easy user interpretation.<br>
+<b>Weather</b> - Weather can be a big impact on flight cancellation or delay. However, in order to include all weather data tying to airport location, it will expotentially increased data size.
 
