@@ -38,6 +38,8 @@ Flight cancellation and delay is a very common problem in the real world. It can
 
 
 ## Data Flow Diagram
+![capture](https://user-images.githubusercontent.com/37318055/49331086-82cc7080-f55d-11e8-96c3-54607b3a3221.PNG)
+
 ![predictive-1](https://user-images.githubusercontent.com/37318055/49330803-7fcf8100-f559-11e8-8107-989757428ad1.png)
 
 
