@@ -2,7 +2,7 @@
 ![predictive_analytics_technologies](https://user-images.githubusercontent.com/37318055/49330804-8231db00-f559-11e8-9db7-861a98d1070e.png)
 
 ## Backgound - Business Problem Overview
-Flight cancellation and delay is a very common problem in the real world. It can have a negatively financial impact both the airlines and passengers financially. Furthermore, it will also impact personal scheduled events and commitments. A passenger who is delayed on a multi-plane trip could miss a connecting flight. Anger, frustration and even Air rage can occur in delayed passengers.
+Flight cancellation and delay is a very common problem in the real world. It can have a negatively financial impact both the airlines and passengers. Furthermore, it will also impact personal scheduled events and commitments. A passenger who is delayed on a multi-plane trip could miss a connecting flight. Anger, frustration and even Air rage can occur in delayed passengers.
 1) Bad customer satisfaction
 2) Financial losses and negative reputation for airlines
 3) Inconvenience for passengers and impacting personal scheduled events
@@ -11,7 +11,7 @@ Flight cancellation and delay is a very common problem in the real world. It can
 ## Project Proposal
 1) Using data visualization tools/skills to graphically display results using historic flight data gathered from Bureau of Transportation Statistic
 2) Training the same set of historic data using predictive algorithms to create a working model
-3) Allow user input of flight criteria (such as weather, date/time, airline, etc.) and predict probability of on-time departure
+3) Allow user input of flight criteria (such as weather, date/time, airline, etc.) and predict probability of on-time departure, cancellation and diversion.
 
 ## Team Member
     Saifee Dalal
