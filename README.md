@@ -1,4 +1,4 @@
-# Final Project - Sentimental Analysis
+# Final Project - Predictive Analysis
 ![predictive_analytics_technologies](https://user-images.githubusercontent.com/37318055/49330804-8231db00-f559-11e8-9db7-861a98d1070e.png)
 
 ## Backgound - Business Problem Overview
