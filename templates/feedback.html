@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Fly Smart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+	
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+			<a class="navbar-brand" id="site_name" href="index.html"><img id = "plane_img" src = "../static/images/Jumbo-07-june.gif" height = "40px" width = "40px"></span><b>  Fly Smart </b></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav navbar-right">
+				<li><a href="/stats.html"><span class="glyphicon glyphicon-scale" aria-hidden="true"></span> Predict Your Flight</a></li>
+				<li><a href="/trends.html"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Flight Trends</a></li>
+				<li><a href="/tweets.html"> <img src = "../static/images/twitter_bird.png" height = "20px" width = "20px"> Flight Tweets</a></li>
+        <li><a href="/feedback.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Feedback</a></li>
+        <li><a href="/team.html"><span aria-hidden="true">OurTeam</a></li>
+      </ul>
+    </div>
+		</div>
+	  </nav>  
+</div>
+<div class="container">
+<div class="col-md-12">
+	<div id="table-area" class="">
+		<table id="tweets-table" class="table table-striped" class="table table-bordered" class="table table-hover">
+			<thead id = "tablehead">
+				<tr>
+					<th class="table-head" class="sorting">User Email</th>
+					<th class="table-head">Feedback</th>
+					<th class="table-head">Submitted On</th>
+				</tr>
+			</thead>
+			<tbody class="table table-hover"></tbody>
+		</table>
+	</div>
+</div>
+</div>
+<div id="feedback">
+		<div id="feedback-form" style='display:none;' class="col-xs-4 col-md-4 panel panel-default">
+		  <form method="POST" action="" class="form panel-body" role="form">
+			<div class="form-group">
+			  <input class="form-control" name="email" autofocus required placeholder="Your e-mail" type="email" />
+			</div>
+			<div class="form-group">
+			  <textarea class="form-control" name="body" required placeholder="Please write your feedback here..." rows="5" maxlength="500"></textarea>
+			</div>
+			<button class="btn btn-primary pull-right" type="submit">Send</button>
+		  </form>
+		</div>
+		<div id="feedback-tab">Feedback</div>
+	  </div>
+</div>
+<script src="{{ url_for('static', filename='js/config.js') }}"></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/feedback.js') }}"></script>
+
+</body>
+
+</html>

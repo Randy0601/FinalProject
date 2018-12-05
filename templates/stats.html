@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Fly Smart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+	
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+			<a class="navbar-brand" id="site_name" href="index.html"><img id = "plane_img" src = "../static/images/Jumbo-07-june.gif" height = "40px" width = "40px"></span><b>  Fly Smart </b></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav navbar-right">
+				<li><a href="/stats.html"><span class="glyphicon glyphicon-scale" aria-hidden="true"></span> Predict Your Flight</a></li>
+				<li><a href="/trends.html"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Flight Trends</a></li>
+				<li><a href="/tweets.html"> <img src = "../static/images/twitter_bird.png" height = "20px" width = "20px"> Flight Tweets</a></li>
+        <li><a href="/feedback.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Feedback</a></li>
+        <li><a href="/team.html"><span aria-hidden="true">OurTeam</a></li>
+      </ul>
+    </div>
+		</div>
+	  </nav> 
+    <div class="container">
+        <div class="col-md-4">
+    <form action="/action_page.php">
+      <div class="form-group">
+          <label for="depCity">From City:</label>
+          <input type="depCity" class="form-control" id="depCity">
+      </div>
+      <div class="form-group">
+          <label for="arrCity">To City:</label>
+          <input type="arrCity" class="form-control" id="arrCity">
+      </div>
+      <div class="form-group">
+          <label for="airline">Airline:</label>
+          <select class="form-control" id="airline">
+          <option>Alaska</option>
+          <option>Allegiant</option>
+          <option>American</option>
+          <option>American Eagle</option>
+          <option>Atlantic Southeast</option>
+          <option>Comair</option>
+          <option>Delta</option>
+          <option>Frontier</option>
+          <option>Hawaiian</option>
+          <option>Jetblue</option>
+          <option>Mesa</option>
+          <option>Midwest</option>
+          <option>Pinnacle</option>
+          <option>Skywest</option>
+          <option>Southwest</option>
+          <option>Spirit</option>
+          <option>United</option>
+          <option>Virgin</option>
+        </select>
+        </div>
+      <div class="form-group">
+        <label for="month">Month:</label>
+        <select class="form-control" id="month">
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+      </div>
+
+      <div class="form-group">
+          <label for="day">Day:</label>
+          <select class="form-control" id="day">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+          </select>
+      </div>
+      
+      <div class="form-group">
+          <label for="time">Time:</label>
+          <select class="form-control" id="time">
+          <option>Early Morning (00:00 - 06:59 CST)</option>
+          <option>Morning (07:00 - 11:59 CST)</option>
+          <option>Afternoon (12:00 - 15:59 CST)</option>
+          <option>Evening (16:00 - 18:59 CST)</option>
+          <option>Late Evening (19:00 - 20:59 CST)</option>
+          <option>Night (21:00 - 23:59 CST)</option>
+          </select>
+      </div>
+      
+      <!-- <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div> -->
+      <button id = "submit_btn" type="submit" class="btn btn-default">Submit</button>
+    </form>
+    </div>
+  </div>
+  
+    
+
+
+  <!-- D3 JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/statsconfig.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='js/statslogic.js')}}"></script>
+
+</body>
+
+  </html>
