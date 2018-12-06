@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 		  <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -37,19 +37,72 @@
 		</div>
 	  </nav> 
     <div class="container">
+        <br>
+        <br>
+        <br>
         <div class="col-md-4">
     <form action="/action_page.php">
       <div class="form-group">
           <label for="depCity">Departure City:</label>
-          <input type="depCity" class="form-control" id="depCity">
+          <input type="depCity" class="form-control" id="depCity" placeholder="St Louis">
       </div>
       <div class="form-group">
           <label for="arrCity">Arrival City:</label>
-          <input type="arrCity" class="form-control" id="arrCity">
+          <input type="arrCity" class="form-control" id="arrCity" placeholder="Dallas">
       </div>
+      
+      <!-- <div class="form-group">
+        <label for="month">Month:</label>
+        <select class="form-control" id="month">
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+      </div>
+
+      <div class="form-group">
+          <label for="day">Day:</label>
+          <select class="form-control" id="day">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+          </select>
+      </div> -->
+      
+      <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" class="form-control" id="date">
+      </div>
+
+      <div class="form-group">
+          <label for="time">Time:</label>
+          <select class="form-control" id="time">
+          <option>Early Morning (00:00 - 06:59 CST)</option>
+          <option>Morning (07:00 - 11:59 CST)</option>
+          <option>Afternoon (12:00 - 15:59 CST)</option>
+          <option>Evening (16:00 - 18:59 CST)</option>
+          <option>Late Evening (19:00 - 20:59 CST)</option>
+          <option>Night (21:00 - 23:59 CST)</option>
+          </select>
+      </div>
+      
       <div class="form-group">
           <label for="airline">Airline:</label>
           <select class="form-control" id="airline">
+          <option>ALL</option>
           <option>Alaska</option>
           <option>Allegiant</option>
           <option>American</option>
@@ -70,39 +123,6 @@
           <option>Virgin</option>
         </select>
         </div>
-        
-      <div class="form-group">
-        <label for="date">Date:</label>
-          <input type="date" class="form-control" id="start" name="trip-start"
-          value="mm-dd-yyyy"
-          min="1900-01-01" max="2200-12-31">
-      </div>
-
-      <!-- <div class="form-group">
-          <label for="day">Day:</label>
-          <select class="form-control" id="day">
-          <option>Monday</option>
-          <option>Tuesday</option>
-          <option>Wednesday</option>
-          <option>Thursday</option>
-          <option>Friday</option>
-          <option>Saturday</option>
-          <option>Sunday</option>
-          </select>
-      </div> -->
-      
-      <div class="form-group">
-          <label for="time">Time:</label>
-          <select class="form-control" id="time">
-          <option>Early Morning (00:00 - 06:59 CST)</option>
-          <option>Morning (07:00 - 11:59 CST)</option>
-          <option>Afternoon (12:00 - 15:59 CST)</option>
-          <option>Evening (16:00 - 18:59 CST)</option>
-          <option>Late Evening (19:00 - 20:59 CST)</option>
-          <option>Night (21:00 - 23:59 CST)</option>
-          </select>
-      </div>
-      
       <!-- <div class="checkbox">
         <label><input type="checkbox"> Remember me</label>
       </div> -->

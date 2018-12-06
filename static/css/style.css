@@ -250,3 +250,16 @@ p {
   #feedback-tab:hover { background-color: rgba(0,0,0,0.4); }
   
   #feedback-form textarea { resize: none; }
+
+  .panel{
+    background-color: rgb(14, 59, 107);
+  }
+
+ #panel_text {
+   background-color: rgb(14, 59, 107);
+    color: white;
+  }
+
+  #filters {
+    background-color: lightblue;
+  }
