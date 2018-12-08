@@ -300,7 +300,7 @@ p {
     font-size: smaller;
   }
   
-  $iPlus: 0;
+  /* $iPlus: 0;
   @for $i from 0 through 7 {
     $iPlus: $i + 1;
     .depairport-results[data-highlight='#{$i}'] > :nth-child(#{$iPlus}) {
@@ -309,8 +309,57 @@ p {
       border-bottom-color: #26C9FF;
       outline: solid 1px darken(#26C9FF, 10%);
     }
-  }
+  } */
 
+  .depairport-results[data-highlight="0"] > :nth-child(1) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .depairport-results[data-highlight="1"] > :nth-child(2) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .depairport-results[data-highlight="2"] > :nth-child(3) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .depairport-results[data-highlight="3"] > :nth-child(4) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .depairport-results[data-highlight="4"] > :nth-child(5) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .depairport-results[data-highlight="5"] > :nth-child(6) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .depairport-results[data-highlight="6"] > :nth-child(7) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .depairport-results[data-highlight="7"] > :nth-child(8) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  
 
   .arrairport-wrapper {
     position: relative;
@@ -347,7 +396,7 @@ p {
     font-size: smaller;
   }
   
-  $jPlus: 0;
+  /* $jPlus: 0;
   @for $j from 0 through 7 {
     $jPlus: $j + 1;
     .arrairport-results[data-highlight='#{$j}'] > :nth-child(#{$jPlus}) {
@@ -356,5 +405,55 @@ p {
       border-bottom-color: #26C9FF;
       outline: solid 1px darken(#26C9FF, 10%);
     }
+  } */
+
+  .arrairport-results[data-highlight="0"] > :nth-child(1) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
   }
+  .arrairport-results[data-highlight="1"] > :nth-child(2) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .arrairport-results[data-highlight="2"] > :nth-child(3) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .arrairport-results[data-highlight="3"] > :nth-child(4) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .arrairport-results[data-highlight="4"] > :nth-child(5) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .arrairport-results[data-highlight="5"] > :nth-child(6) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .arrairport-results[data-highlight="6"] > :nth-child(7) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  .arrairport-results[data-highlight="7"] > :nth-child(8) {
+    color: white;
+    background: #26c9ff;
+    border-bottom-color: #26c9ff;
+    outline: solid 1px #00b6f2;
+  }
+  
 
