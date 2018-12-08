@@ -13,13 +13,13 @@ submit_btn.on("click", function() {
   var searchElement = "";
   var searchKeyword = "";
 
-  searchElement = d3.select("#depCity");
+  searchElement = d3.select("#autocomplete");
   depCity= searchElement.property("value").trim();
   if (depCity != ""){
     console.log(`Dep City is ${depCity}`);
   }
 
-  searchElement = d3.select("#arrCity");
+  searchElement = d3.select("#autocomplete1");
   arrCity= searchElement.property("value").trim();
   if (arrCity != ""){
     console.log(`Arr City is ${arrCity}`);
@@ -32,18 +32,18 @@ submit_btn.on("click", function() {
   }
 
   
-  searchElement = d3.select("#month");
-  month= searchElement.property("value").trim();
-  if (month != ""){
-    console.log(`Month is ${month}`);
+  searchElement = d3.select("#date");
+  date= searchElement.property("value").trim();
+  if (date != ""){
+    console.log(`date is ${date}`);
   }
 
   
-  searchElement = d3.select("#day");
-  day= searchElement.property("value").trim();
-  if (day != ""){
-    console.log(`Day is ${day}`);
-  }
+  // searchElement = d3.select("#day");
+  // day= searchElement.property("value").trim();
+  // if (day != ""){
+  //   console.log(`Day is ${day}`);
+  // }
 
   
   searchElement = d3.select("#time");
