@@ -267,9 +267,9 @@ p {
   .depairport-wrapper {
     position: relative;
     
-    input {
+    /* input {
       width: 100%;
-    }
+    } */
   }
   .depairport-results {
     position: absolute;
@@ -313,59 +313,59 @@ p {
 
   .depairport-results[data-highlight="0"] > :nth-child(1) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .depairport-results[data-highlight="1"] > :nth-child(2) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .depairport-results[data-highlight="2"] > :nth-child(3) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .depairport-results[data-highlight="3"] > :nth-child(4) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .depairport-results[data-highlight="4"] > :nth-child(5) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .depairport-results[data-highlight="5"] > :nth-child(6) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .depairport-results[data-highlight="6"] > :nth-child(7) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .depairport-results[data-highlight="7"] > :nth-child(8) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   
 
   .arrairport-wrapper {
     position: relative;
-    input {
+    /* input {
       width: 100%;
-    }
+    }; */
   }
   .arrairport-results {
     position: absolute;
@@ -409,51 +409,54 @@ p {
 
   .arrairport-results[data-highlight="0"] > :nth-child(1) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .arrairport-results[data-highlight="1"] > :nth-child(2) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .arrairport-results[data-highlight="2"] > :nth-child(3) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   .arrairport-results[data-highlight="3"] > :nth-child(4) {
     color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
-  }
-  .arrairport-results[data-highlight="4"] > :nth-child(5) {
-    color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
-  }
-  .arrairport-results[data-highlight="5"] > :nth-child(6) {
-    color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
-  }
-  .arrairport-results[data-highlight="6"] > :nth-child(7) {
-    color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
-  }
-  .arrairport-results[data-highlight="7"] > :nth-child(8) {
-    color: white;
-    background: #26c9ff;
-    border-bottom-color: #26c9ff;
-    outline: solid 1px #00b6f2;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
   }
   
-
+  .arrairport-results[data-highlight="4"] > :nth-child(5) {
+    color: white;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
+  }
+  
+  .arrairport-results[data-highlight="5"] > :nth-child(6) {
+    color: white;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
+  }
+  
+  .arrairport-results[data-highlight="6"] > :nth-child(7) {
+    color: white;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
+  }
+  
+  .arrairport-results[data-highlight="7"] > :nth-child(8) {
+    color: white;
+    background: rgb(14, 59, 107);
+    border-bottom-color: rgb(14, 59, 107);
+    outline: solid 1px rgb(14, 59, 107);
+  }
+  
