@@ -13,13 +13,13 @@ submit_btn.on("click", function() {
   var searchElement = "";
   var searchKeyword = "";
 
-  searchElement = d3.select("#autocomplete");
+  searchElement = d3.select("#depairport");
   depCity= searchElement.property("value").trim();
   if (depCity != ""){
     console.log(`Dep City is ${depCity}`);
   }
 
-  searchElement = d3.select("#autocomplete1");
+  searchElement = d3.select("#arrairport");
   arrCity= searchElement.property("value").trim();
   if (arrCity != ""){
     console.log(`Arr City is ${arrCity}`);
@@ -37,13 +37,6 @@ submit_btn.on("click", function() {
   if (date != ""){
     console.log(`date is ${date}`);
   }
-
-  
-  // searchElement = d3.select("#day");
-  // day= searchElement.property("value").trim();
-  // if (day != ""){
-  //   console.log(`Day is ${day}`);
-  // }
 
   
   searchElement = d3.select("#time");
