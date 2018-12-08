@@ -13,11 +13,11 @@ submit_btn.on("click", function() {
   var searchElement = "";
   var searchKeyword = "";
 
-  searchElement = d3.select("#depairport");
-  depCity= searchElement.property("value").trim();
-  if (depCity != ""){
-    console.log(`Dep City is ${depCity}`);
-  }
+  // searchElement = d3.select("#depairport");
+  // depCity= searchElement.property("value").trim();
+  // if (depCity != ""){
+  //   console.log(`Dep City is ${depCity}`);
+  // }
 
   searchElement = d3.select("#arrairport");
   arrCity= searchElement.property("value").trim();
@@ -32,10 +32,10 @@ submit_btn.on("click", function() {
   }
 
   
-  searchElement = d3.select("#date");
-  date= searchElement.property("value").trim();
-  if (date != ""){
-    console.log(`date is ${date}`);
+  searchElement = d3.select("#datetime");
+  datetime= searchElement.property("value").trim();
+  if (datetime != ""){
+    console.log(`date is ${datetime}`);
   }
 
   

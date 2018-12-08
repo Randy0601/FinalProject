@@ -349,8 +349,8 @@ p {
   
   $jPlus: 0;
   @for $j from 0 through 7 {
-    $iPlus: $j + 1;
-    .arrairport-results[data-highlight1='#{$j}'] > :nth-child(#{$jPlus}) {
+    $jPlus: $j + 1;
+    .arrairport-results[data-highlight='#{$j}'] > :nth-child(#{$jPlus}) {
       color: white;
       background: #26C9FF;
       border-bottom-color: #26C9FF;

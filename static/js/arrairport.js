@@ -1,6 +1,6 @@
 console.log("Inside arrairport.js")
 
-var options = {
+var options1 = {
   shouldSort: true,
   threshold: 0.4,
   maxPatternLength: 32,
@@ -17,115 +17,117 @@ var options = {
 };
 
 console.log("arrairport.js - before calling fuse")
-var fuse = new Fuse(airports, options)
+var fuse1 = new Fuse(airports, options1)
 console.log("arrairport.js - after calling fuse")
 
 console.log("arrairport.js - before fetching arrairport")
-var ac = $('#arrairport')
-  .on('click', function(e) {
-    e.stopPropagation();
+
+var ac1 = $('#arrairport')
+  .on('click', function(e1) {
+    e1.stopPropagation();
   })
   .on('focus keyup', search)
   .on('keydown', onKeyDown);
 
+  console.log("arrairport.js - ac : "+ac1.val())
   console.log("arrairport.js - after fetching arrairport")
   console.log("arrairport.js - before adding arrairport-wrapper")
-var wrap = $('<div>')
+var wrap1 = $('<div>')
   .addClass('arrairport-wrapper')
-  .insertBefore(ac)
-  .append(ac);
+  .insertBefore(ac1)
+  .append(ac1);
 
   console.log("arrairport.js - after adding arrairport-wrapper")
   console.log("arrairport.js - before adding arrairport-results")
-var list = $('<div>')
+var list1 = $('<div>')
   .addClass('arrairport-results')
-  .on('click', '.arrairport-result', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    selectIndex($(this).data('index'));
+  .on('click', '.arrairport-result', function(e1) {
+    e1.preventDefault();
+    e1.stopPropagation();
+    selectIndex1($(this).data('index'));
   })
-  .appendTo(wrap);
+  .appendTo(wrap1);
 
   console.log("arrairport.js - after adding arrairport-results")
 $(document)
-  .on('mouseover', '.arrairport-result', function(e) {
-    var index = parseInt($(this).data('index'), 10);
-    console.log("index :" +index)
-    if (!isNaN(index)) {
-      list.attr('data-highlight1', index);
+  .on('mouseover', '.arrairport-result', function(e1) {
+    var index1 = parseInt($(this).data('index'), 10);
+    console.log("index :" +index1)
+    if (!isNaN(index1)) {
+      list1.attr('data-highlight', index1);
     }
   })
-  .on('click', clearResults);
+  .on('click', clearResults1);
 
-function clearResults() {
-  results = [];
-  numResults = 0;
-  list.empty();
+function clearResults1() {
+  results1 = [];
+  numResults1 = 0;
+  list1.empty();
 }
 
-function selectIndex(index) {
-  if (results.length >= index + 1) {
-    ac.val(results[index].iata);
-    clearResults();
+function selectIndex1(index1) {
+  if (results1.length >= index1 + 1) {
+    ac1.val(results1[index1].iata);
+    clearResults1();
   }  
 }
 
-var results = [];
-var numResults = 0;
-var selectedIndex = -1;
+var results1 = [];
+var numResults1 = 0;
+var selectedIndex1 = -1;
 
-function search(e) {
-  if (e.which === 38 || e.which === 13 || e.which === 40) {
+function search(e1) {
+  if (e1.which === 38 || e1.which === 13 || e1.which === 40) {
     return;
   }
   
-  if (ac.val().length > 0) {
-    results = _.take(fuse.search(ac.val()), 7);
-    numResults = results.length;
+  if (ac1.val().length > 0) {
+    results1 = _.take(fuse1.search(ac1.val()), 7);
+    numResults1 = results1.length;
     
-    var divs = results.map(function(r, i) {
-        return '<div class="arrairport-result" data-index="'+ i +'">'
-             + '<div><b>'+ r.iata +'</b> - '+ r.name +'</div>'
-             + '<div class="arrairport-location">'+ r.city +', '+ r.country +'</div>'
+    var divs1 = results1.map(function(r1, i1) {
+        return '<div class="arrairport-result" data-index="'+ i1 +'">'
+             + '<div><b>'+ r1.iata +'</b> - '+ r1.name +'</div>'
+             + '<div class="arrairport-location">'+ r1.city +', '+ r1.country +'</div>'
              + '</div>';
      });
     
-    selectedIndex = -1;
-    list.html(divs.join(''))
-      .attr('data-highlight1', selectedIndex);
+    selectedIndex1 = -1;
+    list1.html(divs1.join(''))
+      .attr('data-highlight', selectedIndex1);
 
   } else {
-    numResults = 0;
-    list.empty();
+    numResults1 = 0;
+    list1.empty();
   }
 }
 
-function onKeyDown(e) {
-  switch(e.which) {
+function onKeyDown(e1) {
+  switch(e1.which) {
     case 38: // up
-      selectedIndex--;
-      if (selectedIndex <= -1) {
-        selectedIndex = -1;
+      selectedIndex1--;
+      if (selectedIndex1 <= -1) {
+        selectedIndex1 = -1;
       }
-      list.attr('data-highlight1', selectedIndex);
+      list1.attr('data-highlight', selectedIndex1);
       break;
     case 13: // enter
-      selectIndex(selectedIndex);
+      selectIndex1(selectedIndex1);
       break;
     case 9: // enter
-      selectIndex(selectedIndex);
-      e.stopPropagation();
+      selectIndex1(selectedIndex1);
+      e1.stopPropagation();
       return;
     case 40: // down
-      selectedIndex++;
-      if (selectedIndex >= numResults) {
-        selectedIndex = numResults-1;
+      selectedIndex1++;
+      if (selectedIndex1 >= numResults1) {
+        selectedIndex1 = numResults1-1;
       }
-      list.attr('data-highlight1', selectedIndex);
+      list1.attr('data-highlight', selectedIndex1);
       break;
 
     default: return; // exit this handler for other keys
   }
-  e.stopPropagation();
-  e.preventDefault(); // prevent the default action (scroll / move caret)
+  e1.stopPropagation();
+  e1.preventDefault(); // prevent the default action (scroll / move caret)
 }
