@@ -65,8 +65,9 @@ h5 {
 	float: left;
 }
 
-#alert_placeholder{
+#alert_date_placeholder,#alert_arrairport_placeholder,#alert_depairport_placeholder{
   color: red;
+  font-size: small;
 
 }
 
@@ -460,3 +461,17 @@ p {
     outline: solid 1px rgb(14, 59, 107);
   }
   
+  /* input:required {
+    box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
+  } */
+
+  /* input:required:focus {
+    border: 1px solid red;
+    outline: none;
+  } */
+
+  /* input:required:hover {
+    opacity: 1;
+  } */
+
+  .required:after { content:" *"; }

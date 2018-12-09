@@ -50,27 +50,35 @@ t = Twitter(
     auth=OAuth(twitter_token, twitter_token_secret, twitter_consumer_key, twitter_consumer_secret))
 
 
-@app.route('/getTweets/<searchKeyword>')
-def getTweets(searchKeyword):
-    print("Inside getTweets")
+@app.route('/getFlightPrediction/<airline>/<calendarDay>/<weekDay>/<hour>')
+def getPrediction(airline,calendarDay,weekDay,hour):
+    print("Inside getPrediction")
+    print(airline)
+    print(calendarDay)
+    print(weekDay)
+    print(hour)
+    if airline == 'null':
+        print ("Use model without airline")
+    else:
+        print ("Use model with airline")
     # Search for the latest tweets about #pycon
-    response = t.search.tweets(q=searchKeyword,lang="en",tweet_mode='extended')
+    response = 0
     print(response)
     return jsonify(response)
 
-@app.route('/scrapeCoffeeNews')
-def scrapeCoffeeNews():
-    listings = mongo.db.listings
-    listings_data = scrape_coffee_news.scrape()
-    listings.update({}, listings_data, upsert=True)
-    return news()
+# @app.route('/scrapeCoffeeNews')
+# def scrapeCoffeeNews():
+#     listings = mongo.db.listings
+#     listings_data = scrape_coffee_news.scrape()
+#     listings.update({}, listings_data, upsert=True)
+#     return news()
 
-@app.route('/scrape')
-def scrape():
-    listings = mongo.db.final_data
-    listings_data = scrape_coffee.scrape()
-    listings.update({}, listings_data, upsert=True)
-    return indexpage()
+# @app.route('/scrape')
+# def scrape():
+#     listings = mongo.db.final_data
+#     listings_data = scrape_coffee.scrape()
+#     listings.update({}, listings_data, upsert=True)
+#     return indexpage()
 
 if __name__ == "__main__":
     app.run(debug=True)

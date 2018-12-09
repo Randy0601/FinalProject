@@ -24,7 +24,7 @@ var ac = $('#depairport')
   .on('focus keyup', search)
   .on('keydown', onKeyDown);
 
-  console.log("depairport.js - ac : "+ac.val())
+
 var wrap = $('<div>')
   .addClass('depairport-wrapper')
   .insertBefore(ac)

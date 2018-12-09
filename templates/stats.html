@@ -41,77 +41,67 @@
 		</div>
 	  </nav> 
     <div class="container">
-        <br>
-        <br>
-        <br>
-        <div class="col-md-4">
-    <form action="/action_page.php">
-      <div class="form-group">
-          <label for="airline">Airline:</label>
-          <select class="form-control" id="airline">
-          <option>ANY</option>
-          <option>Alaska</option>
-          <option>Allegiant</option>
-          <option>American</option>
-          <option>American Eagle</option>
-          <option>Atlantic Southeast</option>
-          <option>Comair</option>
-          <option>Delta</option>
-          <option>Frontier</option>
-          <option>Hawaiian</option>
-          <option>Jetblue</option>
-          <option>Mesa</option>
-          <option>Midwest</option>
-          <option>Pinnacle</option>
-          <option>Skywest</option>
-          <option>Southwest</option>
-          <option>Spirit</option>
-          <option>United</option>
-          <option>Virgin</option>
-        </select>
+      <br>
+      <br>
+      <br>
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+
+              <label for="airline">Airline:</label>
+              <select class="form-control" id="airline">
+              <option>ANY</option>
+              <option>Alaska</option>
+              <option>Allegiant</option>
+              <option>American</option>
+              <option>American Eagle</option>
+              <option>Atlantic Southeast</option>
+              <option>Comair</option>
+              <option>Delta</option>
+              <option>Frontier</option>
+              <option>Hawaiian</option>
+              <option>Jetblue</option>
+              <option>Mesa</option>
+              <option>Midwest</option>
+              <option>Pinnacle</option>
+              <option>Skywest</option>
+              <option>Southwest</option>
+              <option>Spirit</option>
+              <option>United</option>
+              <option>Virgin</option>
+            </select>
+          </div>
+          
+          <div class="form-group" class="required">
+              <label class="control-label">Departure Airport:</label>
+              <input type="text" class="form-control" id="depairport" placeholder="St Louis" required />
+          </div>
+          <div class="form-group" class="required">
+            <label class="control-label">Arrival Airport:</label>
+            <input type="text" class="form-control" id="arrairport" required placeholder="Dallas"/>
         </div>
-      <div class="form-group">
-          <label class="control-label">Departure Airport:</label>
-          <input type="text" class="form-control" id="depairport" placeholder="St Louis">
+          <div class="form-group" class="required">
+              <label for="datetime">Date:</label>
+              <input type="date" class="form-control" required id="date"/>
+          </div>
+          <div class="form-group">
+              <label for="time">Time:</label>
+              <select class="form-control" id="time">
+              <option>Early Morning (00:00 - 06:59 CST)</option>
+              <option>Morning (07:00 - 11:59 CST)</option>
+              <option>Afternoon (12:00 - 15:59 CST)</option>
+              <option>Evening (16:00 - 18:59 CST)</option>
+              <option>Late Evening (19:00 - 20:59 CST)</option>
+              <option>Night (21:00 - 23:59 CST)</option>
+              </select>
+          </div>
+          <button id = "submit_btn" type="submit" class="btn btn-default" onclick="">Submit</button>
+        </form>
       </div>
-
-      <div class="form-group">
-        <label class="control-label">Arrival Airport:</label>
-        <input type="text" class="form-control" id="arrairport" placeholder="Dallas">
+      <div class="col-md-8">
+          <div id = "result_placeholder"></div>
+      </div>
     </div>
-    
-<!--       
-      <div class="form-group">
-          <label class="control-label">Enter an Airport</label>
-          <input id="autocomplete" type="text" />
-      </div> -->
-      
-      <div class="form-group">
-          <label for="datetime">Date:</label>
-          <input type="date" class="form-control" id="datetime">
-      </div>
-
-      <div class="form-group">
-          <label for="time">Time:</label>
-          <select class="form-control" id="time">
-          <option>Early Morning (00:00 - 06:59 CST)</option>
-          <option>Morning (07:00 - 11:59 CST)</option>
-          <option>Afternoon (12:00 - 15:59 CST)</option>
-          <option>Evening (16:00 - 18:59 CST)</option>
-          <option>Late Evening (19:00 - 20:59 CST)</option>
-          <option>Night (21:00 - 23:59 CST)</option>
-          </select>
-      </div>
-
-      
-     
-      <!-- <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-      </div> -->
-      <button id = "submit_btn" type="submit" class="btn btn-default">Submit</button>
-    </form>
-    </div>
-  </div>
   
     
 
@@ -121,7 +111,7 @@
   <!-- Our JavaScript -->
   <script type="text/javascript" src="{{url_for('static', filename='js/arrairport.js')}}"></script>
   <script type="text/javascript" src="{{url_for('static', filename='js/depairport.js')}}"></script>
-  <script type="text/javascript" src="{{url_for('static', filename='js/statslogic.js')}}"></script>
+  <script src="{{url_for('static', filename='js/statslogic.js')}}"></script>
 
 
 </body>

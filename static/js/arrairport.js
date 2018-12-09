@@ -1,4 +1,3 @@
-console.log("Inside arrairport.js")
 
 var options1 = {
   shouldSort: true,
@@ -16,11 +15,7 @@ var options1 = {
   }]
 };
 
-console.log("arrairport.js - before calling fuse")
 var fuse1 = new Fuse(airports, options1)
-console.log("arrairport.js - after calling fuse")
-
-console.log("arrairport.js - before fetching arrairport")
 
 var ac1 = $('#arrairport')
   .on('click', function(e1) {
@@ -29,16 +24,11 @@ var ac1 = $('#arrairport')
   .on('focus keyup', search)
   .on('keydown', onKeyDown);
 
-  console.log("arrairport.js - ac : "+ac1.val())
-  console.log("arrairport.js - after fetching arrairport")
-  console.log("arrairport.js - before adding arrairport-wrapper")
 var wrap1 = $('<div>')
   .addClass('arrairport-wrapper')
   .insertBefore(ac1)
   .append(ac1);
 
-  console.log("arrairport.js - after adding arrairport-wrapper")
-  console.log("arrairport.js - before adding arrairport-results")
 var list1 = $('<div>')
   .addClass('arrairport-results')
   .on('click', '.arrairport-result', function(e1) {
@@ -48,7 +38,6 @@ var list1 = $('<div>')
   })
   .appendTo(wrap1);
 
-  console.log("arrairport.js - after adding arrairport-results")
 $(document)
   .on('mouseover', '.arrairport-result', function(e1) {
     var index1 = parseInt($(this).data('index'), 10);
