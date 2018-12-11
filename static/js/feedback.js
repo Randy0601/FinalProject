@@ -9,7 +9,7 @@ submit_btn.on("click", function() {
 
   console.log("Onclick Event on Submit Button: Begin");
   //preventing refresh
-  // d3.event.preventDefault();
+
 
   var searchElement = "";
   var searchKeyword = "";
@@ -18,16 +18,23 @@ submit_btn.on("click", function() {
   email_id = searchElement.property("value").trim();
   if (email_id != ""){
     console.log(`Email is ${email_id}`);
+    searchElement = d3.select("#feedback");
+    feedback = searchElement.property("value").trim();
+    if (feedback != ""){
+    console.log(`Feedback is ${feedback}`);
+    submitFeedback(email_id,feedback);
+     }
     // feedbackTable.selectAll("tr").remove();
   }
 
-  searchElement = d3.select("#feedback");
-  feedback = searchElement.property("value").trim();
-  if (feedback != ""){
-    console.log(`Feedback is ${feedback}`);
-  }
+  // searchElement = d3.select("#feedback");
+  // feedback = searchElement.property("value").trim();
+  // if (feedback != ""){
+  //   console.log(`Feedback is ${feedback}`);
+  // }
 
-  submitFeedback(email_id,feedback);
+  // submitFeedback(email_id,feedback);
+
   console.log("Onclick Event on Search Button: End");
 });
 
@@ -41,39 +48,20 @@ submit_btn.on("click", function() {
 function submitFeedback(email_id,feedback){
 
   console.log("Inside submitFeedback(): Begin");
-  
+  // d3.event.preventDefault();
   var url = "/submitFeedback/"+email_id+"/"+feedback;
+  // $('#result_placeholder').html('<span><h4><b>Thanks for submitting your feedback<b></h4></span>');
+
   console.log("URL", url);
   d3.json(url,function(data) {
     console.log("Returned Response", data);
-
+   
     if (data != null && data.length > 0){
       
       //document.getElementById("tablehead").classList.remove('invisible');
       d3.select("#tablehead")
-        .classed("invisible", false);
+        .classed("invisible", false); 
 
-      for (var i = 0; i < data.length; i++) {
-        
-        feedback_db = data[i].feedback;
-        console.log("Feedback:", feedback_db);
-        email_db = data[i].email;
-        console.log("Email:", email_db);
-        submitted_db = data[i].submitted_at
-        console.log("Submitted:", submitted_db);
-
-        var row;
-        var cell;
-        row = feedbackTable.append("tr");
-        cell = row.append("td");
-        cell.text(email_db);
-        cell = row.append("td");
-        cell.text(feedback_db);
-        cell = row.append("td");
-        cell.text(submitted_db);
-        
-
-      }
     }
 
     else

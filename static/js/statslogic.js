@@ -6,7 +6,7 @@ var submit_btn = d3.select("#submit_btn");
 // logic to handle onClick event on "Search" button
 submit_btn.on("click", function() {
   $('#result_placeholder').html('<span></span>');
-
+  
   console.log("Onclick Event on Submit Button: Begin");
 
   var searchElement = "";
@@ -40,6 +40,20 @@ submit_btn.on("click", function() {
       if (date != ""){
            //preventing refresh
            d3.event.preventDefault();
+          //  var elem = document.getElementById("myBar");
+          //   d3.select("#myProgress")
+          //         .classed("invisible", false); 
+          //   var width = 1;
+          //   var id = setInterval(frame, 50);
+          //   function frame() {
+          //     if (width >= 100) {
+          //       clearInterval(id);
+          //     } else {
+          //       width++; 
+          //       elem.style.width = width + '%'; 
+          //     }
+          //   }
+
         console.log(`Date is ${date}`);
         
         var d = new Date(date);
@@ -120,9 +134,9 @@ submit_btn.on("click", function() {
           console.log("Returned Response", data);
            
           if (data == 1)
-            $('#result_placeholder').html('<span><img src="../static/images/delay.jpg" height = "500px" width = "800px"></span>');
+            $('#result_placeholder').html('<span><img src="../static/images/delay.jpg" height = "300px" width = "500px"><br><br><h4>Happy Travels! Please take a moment to provide your <a href = "feedback.html">feedback</a></h4></span>');
           else
-            $('#result_placeholder').html('<span><img src="../static/images/ontime.jpg" height = "500px" width = "800px"></span>');
+            $('#result_placeholder').html('<span><img src="../static/images/ontime.jpg" height = "300px" width = "500px"><br><br><h4>Happy Travels! Please take a moment to provide your <a href = "feedback.html">feedback</a></h4></span>');
         })
 
 
