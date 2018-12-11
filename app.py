@@ -3,10 +3,11 @@ import json
 from twitter import *
 from flask import Flask, jsonify, render_template, request, redirect
 from flask_pymongo import PyMongo
+import datetime
 
 app = Flask(__name__)
 
-# app.config["MONGO_URI"] = "mongodb://localhost:27017/coffee"
+# app.config["MONGO_URI"] = "mongodb://localhost:27017/fly_smart"
 app.config["MONGO_URI"] = "mongodb://washu:WashuData1@ds245523.mlab.com:45523/dataanalytics"
 mongo = PyMongo(app)
 
@@ -23,8 +24,10 @@ def tweets():
     return render_template('tweets.html')
 
 @app.route("/feedback.html")
-def findCoffee():
-    return render_template('feedback.html')
+def getFeedback():
+    listings = mongo.db.user_feedback.find().sort("inserted_time", -1).limit(10)
+    return render_template('feedback.html', listings=listings)
+
 
 @app.route("/stats.html")
 def stats():
@@ -57,28 +60,37 @@ def getPrediction(airline,calendarDay,weekDay,hour):
     print(calendarDay)
     print(weekDay)
     print(hour)
+    response = getModelOutput(airline,calendarDay,weekDay,hour)
+    print(response)
+    return jsonify(response)
+
+@app.route('/submitFeedback/<email_id>/<feedback>')
+def submitFeedback(email_id,feedback):
+    print("Inside submitFeedback")
+    print(email_id)
+    print(feedback)
+    fs_listings = {"email":email_id , "feedback":feedback, "inserted_time":datetime.datetime.now()}
+    listings = mongo.db.user_feedback
+    listings.insert_one(fs_listings)
+    return getFeedback()
+
+@app.route('/getTweets/<searchKeyword>')
+def getTweets(searchKeyword):
+    print("Inside getTweets")
+    # Search for the latest tweets about #pycon
+    response = t.search.tweets(q=searchKeyword,lang="en",tweet_mode='extended')
+    print(response)
+    return jsonify(response)
+
+def getModelOutput(airline,calendarDay,weekDay,hour):
+    print("Inside getModelOutput")
     if airline == 'null':
         print ("Use model without airline")
     else:
         print ("Use model with airline")
-    # Search for the latest tweets about #pycon
+    #hardcoding response below. Ideally the model would predict a 0 or 1
     response = 0
-    print(response)
-    return jsonify(response)
-
-# @app.route('/scrapeCoffeeNews')
-# def scrapeCoffeeNews():
-#     listings = mongo.db.listings
-#     listings_data = scrape_coffee_news.scrape()
-#     listings.update({}, listings_data, upsert=True)
-#     return news()
-
-# @app.route('/scrape')
-# def scrape():
-#     listings = mongo.db.final_data
-#     listings_data = scrape_coffee.scrape()
-#     listings.update({}, listings_data, upsert=True)
-#     return indexpage()
+    return response
 
 if __name__ == "__main__":
     app.run(debug=True)
