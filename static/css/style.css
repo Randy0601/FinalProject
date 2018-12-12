@@ -151,6 +151,12 @@ p {
     #table-area td {
       font-size: 1em;
     }
+
+    #bg-image{
+      height: 150px;
+      width: 500px;
+    }
+    
   }
   
   @media (max-width: 500px) {
@@ -198,6 +204,11 @@ p {
       text-align: center;
       content: attr(data-th);
       border-color: black;
+    }
+
+    #bg-image{
+      height: 75px;
+      width: 250px;
     }
   }    
   /* #feedback {
