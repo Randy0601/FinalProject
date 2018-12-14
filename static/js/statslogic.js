@@ -40,20 +40,7 @@ submit_btn.on("click", function() {
       if (date != ""){
            //preventing refresh
            d3.event.preventDefault();
-          //  var elem = document.getElementById("myBar");
-          //   d3.select("#myProgress")
-          //         .classed("invisible", false); 
-          //   var width = 1;
-          //   var id = setInterval(frame, 50);
-          //   function frame() {
-          //     if (width >= 100) {
-          //       clearInterval(id);
-          //     } else {
-          //       width++; 
-          //       elem.style.width = width + '%'; 
-          //     }
-          //   }
-
+   
         console.log(`Date is ${date}`);
         
         var d = new Date(date);
@@ -67,7 +54,11 @@ submit_btn.on("click", function() {
         console.log(`Calendar Day is ${calendarDay}`);
 
         var weekDay = d.getDay();
-        console.log(`Week Day is ${weekDay}`);
+
+        if (weekDay == 0)
+          weekDay = 7;
+        
+          console.log(`Week Day is ${weekDay}`);
 
         var hour = 0;
 
@@ -127,7 +118,7 @@ submit_btn.on("click", function() {
         else if (airline == 'Virgin')
           airline_code = 'VX'
         
-        var url = "/getFlightPrediction/"+airline_code+"/"+calendarDay+"/"+weekDay+"/"+hour;
+        var url = "/getFlightPrediction/"+airline_code+"/"+depAirport+"/"+arrAirport+"/"+calendarDay+"/"+weekDay+"/"+hour;
         console.log("URL", url);
         //Calling the getYelpReview method to fetch Yelp Reviews
         d3.json(url,function(data) {

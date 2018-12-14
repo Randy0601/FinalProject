@@ -53,14 +53,16 @@ t = Twitter(
     auth=OAuth(twitter_token, twitter_token_secret, twitter_consumer_key, twitter_consumer_secret))
 
 
-@app.route('/getFlightPrediction/<airline>/<calendarDay>/<weekDay>/<hour>')
-def getPrediction(airline,calendarDay,weekDay,hour):
+@app.route('/getFlightPrediction/<airline>/<depAirport>/<arrAirport>/<calendarDay>/<weekDay>/<hour>')
+def getPrediction(airline,depAirport,arrAirport,calendarDay,weekDay,hour):
     print("Inside getPrediction")
-    print(airline)
-    print(calendarDay)
-    print(weekDay)
-    print(hour)
-    response = getModelOutput(airline,calendarDay,weekDay,hour)
+    print("Airline :" +airline)
+    print("Dep Airport :" +depAirport)
+    print("Arr Airport :" +arrAirport)
+    print("CalendarDay :" +calendarDay)
+    print("WeekDay :" +weekDay)
+    print("Hour :" +hour)
+    response = getModelOutput(airline,depAirport,arrAirport,calendarDay,weekDay,hour)
     print(response)
     return jsonify(response)
 
@@ -82,7 +84,7 @@ def getTweets(searchKeyword):
     print(response)
     return jsonify(response)
 
-def getModelOutput(airline,calendarDay,weekDay,hour):
+def getModelOutput(airline,depAirport,arrAirport,calendarDay,weekDay,hour):
     print("Inside getModelOutput")
     if airline == 'null':
         print ("Use model without airline")
